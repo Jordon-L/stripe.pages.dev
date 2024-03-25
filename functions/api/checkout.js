@@ -13,6 +13,7 @@ function createStripeClient(apiKey) {
 }
 
 export async function onRequest(context) {
+  console.log('test');
   const stripe = createStripeClient(context.env.STRIPE_API_KEY);
 	/*
 	 * Sample checkout integration which redirects a customer to a checkout page
