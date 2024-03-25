@@ -2,13 +2,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-
-  },
+  "scripts": {},
   "dependencies": {
+    "hono": "^3.7.0",
     "stripe": "8.186.1"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
