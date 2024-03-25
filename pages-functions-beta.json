@@ -1,4 +1,0 @@
-{
-  "baseURL": "/api/checkout",
-  "entryPoint": "/build/index.mjs"
-}
