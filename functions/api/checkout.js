@@ -10,7 +10,7 @@ function createStripeClient(apiKey) {
 export async function onRequestPost(context) {
   console.log('test');
   const stripe = createStripeClient(context.env.STRIPE_API_KEY);
-  const { origin } = new URL(request.url);
+  const { origin } = new URL(context.request.url);
 	/*
 	 * Sample checkout integration which redirects a customer to a checkout page
 	 * for the specified line items.
