@@ -2,7 +2,7 @@ import Stripe from 'stripe/lib/stripe.js';
 
 
 function createStripeClient(apiKey) {
-	new Stripe('apiKey', {
+	new Stripe(apiKey, {
     apiVersion: '2023-10-16',
   });
 }
