@@ -12,7 +12,7 @@ function createStripeClient(apiKey) {
 	});
 }
 
-export async function onRequest(context) {
+export async function onRequestPost(context) {
   console.log('test');
   const stripe = createStripeClient(context.env.STRIPE_API_KEY);
 	/*
