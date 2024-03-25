@@ -13,7 +13,7 @@ function createStripeClient(apiKey) {
 	});
 }
 
-app.get("/", async (context) => {
+app.get("/api/checkout", async (context) => {
 	const stripe = createStripeClient(context.env.STRIPE_API_KEY);
 	/*
 	 * Sample checkout integration which redirects a customer to a checkout page
@@ -42,7 +42,7 @@ app.get("/", async (context) => {
 	return context.redirect(session.url, 303);
 });
 
-app.post("/webhook", async (context) => {
+app.post("/api/webhook", async (context) => {
 	const stripe = createStripeClient(context.env.STRIPE_API_KEY);
 	const signature = context.req.raw.headers.get("stripe-signature");
 	try {
