@@ -1,15 +1,10 @@
-const Stripe = require("stripe");
+import Stripe from 'stripe';
 
 
 function createStripeClient(apiKey) {
-	return new Stripe(apiKey, {
-		appInfo: {
-			// For sample support and debugging, not required for production:
-			name: "stripe-samples/stripe-node-cloudflare-worker-template",
-			version: "0.0.1",
-			url: "https://github.com/stripe-samples",
-		},
-	});
+	new Stripe('apiKey', {
+    apiVersion: '2023-10-16',
+  });
 }
 
 export async function onRequestPost(context) {
