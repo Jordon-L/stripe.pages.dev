@@ -1,4 +1,4 @@
-import Stripe from 'stripe';
+import Stripe from 'stripe/lib/stripe.js';
 
 
 function createStripeClient(apiKey) {
