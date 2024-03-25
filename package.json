@@ -5,7 +5,7 @@
   "scripts": {},
   "dependencies": {
     "hono": "^3.7.0",
-    "stripe": "8.186.1"
+    "stripe": "^13.6.0"
   },
   "devDependencies": {}
 }
