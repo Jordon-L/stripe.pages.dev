@@ -15,6 +15,7 @@ function createStripeClient(apiKey) {
 export async function onRequestPost(context) {
   console.log('test');
   const stripe = createStripeClient(context.env.STRIPE_API_KEY);
+  const { origin } = new URL(request.url);
 	/*
 	 * Sample checkout integration which redirects a customer to a checkout page
 	 * for the specified line items.
@@ -36,8 +37,8 @@ export async function onRequestPost(context) {
 			},
 		],
 		mode: "payment",
-		success_url: "https://example.com/success",
-		cancel_url: "https://example.com/cancel",
+		success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+		cancel_url: `${origin}/canceled`,
 	});
 	return context.redirect(session.url, 303);
 }
